@@ -25,9 +25,9 @@ input.onButtonPressed(Button.A, function () {
     DigitalPin.P1,
     DigitalPin.P2,
     PingUnit.Centimeters
-    )
+  )
   basic.showNumber(disctance)
-  if(disctance < 10){
+  if (disctance < 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
@@ -41,4 +41,11 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
   }
   basic.showIcon(IconNames.Happy)
+  basic.pause(1000)
+  neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+  neopixelStrip.show()
 })
