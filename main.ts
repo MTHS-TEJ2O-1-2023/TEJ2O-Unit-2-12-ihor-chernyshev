@@ -1,7 +1,7 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  * Created by: Ihor Chernyshev
  * Created on: Oct 2023
- * This program turn all the neopixels to red, if the distance is < 10 cm, and also turn the neopixels to green, if the distance is >= 10 cm
+ * This program turn all the neopixels to red, but if the distance is < 10 cm, and also turn the neopixels to green, if the distance is >= 10 cm
 */
 
 let distance = 0
