@@ -48,7 +48,6 @@ while True:
             display.show(Image.HAPPY)
             sleep(1000)
             np.clear()
-            
         # turn all neopixels to green
         elif dist_cm >= 10:
             display.scroll(str(int(dist_cm)))
