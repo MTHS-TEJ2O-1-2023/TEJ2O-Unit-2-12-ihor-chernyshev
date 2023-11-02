@@ -35,6 +35,7 @@ while True:
         micros = time_pulse_us(echo, 2)
         t_echo = micros / 1000000
         dist_cm = (t_echo / 2) * 34300
+        # turn all neopixels to red
         if dist_cm < 10:
             display.scroll(str(int(dist_cm)))
             np[0] = (255, 0, 0)
@@ -46,6 +47,7 @@ while True:
             display.show(Image.HAPPY)
             sleep(1000)
             np.clear()
+        # turn all neopixels to green
         elif dist_cm >= 10:
             display.scroll(str(int(dist_cm)))
             np[0] = (0, 255, 0)
