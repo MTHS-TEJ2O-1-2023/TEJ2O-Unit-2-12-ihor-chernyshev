@@ -26,7 +26,7 @@ input.onButtonPressed(Button.A, function () {
     PingUnit.Centimeters
   )
   basic.showNumber(distance)
-  
+
   // turn all neopixels to red
   if (distance < 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
