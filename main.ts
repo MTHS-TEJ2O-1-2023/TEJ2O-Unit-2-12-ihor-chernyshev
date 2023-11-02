@@ -26,12 +26,16 @@ input.onButtonPressed(Button.A, function () {
     PingUnit.Centimeters
   )
   basic.showNumber(distance)
+  
+  // turn all neopixels to red
   if (distance < 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.show()
+
+  // turn all neopixels to green
   } else if (distance >= 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
@@ -39,6 +43,7 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.show()
   }
+
   basic.showIcon(IconNames.Happy)
   basic.pause(1000)
   neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
